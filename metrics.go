@@ -16,7 +16,7 @@ func New() *Metrics {
 
 func (m *Metrics) Inc(name string) {
 	m.mu.Lock()
-	m.metrics[name] += 1
+	m.metrics[name]++
 	m.mu.Unlock()
 }
 

@@ -33,7 +33,7 @@ func (m *Metrics) Get(name string) uint64 {
 	return m.metrics[name]
 }
 
-func (m *Metrics) GetAll() map[string]uint64 {
+func (m *Metrics) All() map[string]uint64 {
 	m.mu.RLock()
 	defer m.mu.RUnlock()
 
